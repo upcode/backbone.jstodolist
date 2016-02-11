@@ -1,7 +1,7 @@
 <h1> TO DO List In Backbone.js and Local Storage</h1> 
-<p> This is a simple application using Backbone.js to create a simple To Do List on client side. Goal was to create to do list application using CRUD create, rewrite, update, delete methods by using Local Storage 
+<p> This is a simple application using Backbone.js to create a simple To Do List for client side. The goal was to create a to do list application using CRUD to create, rewrite, update, delete methods by using Local Storage 
 <h6>Extra:</h6>
-<p>Index2.html is todo list using plain vanilla JavaScript and local storage.</p>
+<p>Index2.html is a to do list using plain vanilla JavaScript and local storage.</p>
 	
 
 <h1>Requiremnets:</h1>
@@ -32,7 +32,7 @@ files structure:
 <li>Bootstrap</li> 
 
 
-<p>fork it!  and play around and add features</p>
+<p>fork it! play around</p>
 
 <h1>Preview:</h1>
 
