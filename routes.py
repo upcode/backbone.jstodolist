@@ -16,7 +16,6 @@ from model import connect_to_db, db
 ##############################################################################
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/uploads'
 app.secret_key = 'RED PANDA'
 ##############################################################################
 
@@ -25,116 +24,116 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY", "freedom")
                         ## LOGIN ROUTE ##
 ##############################################################################
 
-@app.route('/', methods=['GET'])
-def login():
-    """Show login form."""
+# @app.route('/', methods=['GET'])
+# def login():
+#     """Show login form."""
 
-    return render_template("login.html")
-
-
-@app.route('/login-process', methods=['POST'])
-def process_login():
-    """Log user into site, find user in the DB and their
-    their user id in the session then if they
-     are logged in redirect them to map page"""
-
-    # Get form variables
-    email = request.form["email"]
-    password = request.form["password"]
-
-    # printing data from form to BASH
-    print "form password"
-
-    print password
-
-    # check user exisit and then asign them variable user
-    user = User.query.filter_by(email=email).first()
-
-    print "\n \n \n ", user
-
-    # Conditions
-    if not user:
-
-        flash("No such user")
-
-        return redirect("/")
-
-    elif user.password != password:
-
-        flash("Incorrect password")
-
-        return redirect("/")
-    else:
-        session["user_id"] = user.user_id
-
-    flash("Logged in")
-
-    return redirect('/index')
-
-##############################################################################
-                        ## LOG OUT ROUTE ##
-##############################################################################
-
-@app.route("/logout")
-def process_logout():
-    """removing user_id from session to logout user"""
-
-    print " LOGGED OUT USER "
-
-    del session["user_id"]
-
-    flash("You have Successfully Logged Out!")
-
-    return redirect("/")
-
-##############################################################################
-                            # # REGISTER ROUTE # #
-##############################################################################
+#     return render_template("login.html")
 
 
-@app.route('/register-process', methods=['POST'])
-def register_processed():
-    """New user signup form"""
+# @app.route('/login-process', methods=['POST'])
+# def process_login():
+#     """Log user into site, find user in the DB and their
+#     their user id in the session then if they
+#      are logged in redirect them to map page"""
 
-    print "REGISTER ROUTE IS WORKING"
+#     # Get form variables
+#     email = request.form["email"]
+#     password = request.form["password"]
 
-    # Get variables from HTML form
-    email = request.form["email"]
+#     # printing data from form to BASH
+#     print "form password"
 
-    password = request.form["password"]
+#     print password
 
-    # query the DB for user
-    new_user = User(email=email, password=password)
+#     # check user exisit and then asign them variable user
+#     user = User.query.filter_by(email=email).first()
 
-    # check DB for user searching by email
-    same_email_user = User.query.filter(User.email == email).first()
+#     print "\n \n \n ", user
 
-    # users who registered / login will be redircted --> list-page
-    if same_email_user:
-        flash("Email is already registered. Please signin to your account")
-        return redirect("/")
+#     # Conditions
+#     if not user:
 
-    # check user by username --> condition to authentiate user
-    same_username = User.query.filter(User.email == email).first()
-    if same_username:
-        flash("please pick another username")
-        return redirect("/")
+#         flash("No such user")
 
-        # add user to db if they are new
-    db.session.add(new_user)
-        # commit transaction
-    db.session.commit()
+#         return redirect("/")
 
-    # query db user by email add them to current session and redirect
-    # user to passport page
+#     elif user.password != password:
 
-    user = User.query.filter_by(email=email).first()
+#         flash("Incorrect password")
 
-    flash("User %s added.You have successfully created an account! Welcome to Live Simply" % email)
+#         return redirect("/")
+#     else:
+#         session["user_id"] = user.user_id
 
-    session["user_id"] = user.user_id
+#     flash("Logged in")
 
-    return redirect("/index")
+#     return redirect('/index')
+
+# ##############################################################################
+#                         ## LOG OUT ROUTE ##
+# ##############################################################################
+
+# @app.route("/logout")
+# def process_logout():
+#     """removing user_id from session to logout user"""
+
+#     print " LOGGED OUT USER "
+
+#     del session["user_id"]
+
+#     flash("You have Successfully Logged Out!")
+
+#     return redirect("/")
+
+# ##############################################################################
+#                             # # REGISTER ROUTE # #
+# ##############################################################################
+
+
+# @app.route('/register-process', methods=['POST'])
+# def register_processed():
+#     """New user signup form"""
+
+#     print "REGISTER ROUTE IS WORKING"
+
+#     # Get variables from HTML form
+#     email = request.form["email"]
+
+#     password = request.form["password"]
+
+#     # query the DB for user
+#     new_user = User(email=email, password=password)
+
+#     # check DB for user searching by email
+#     same_email_user = User.query.filter(User.email == email).first()
+
+#     # users who registered / login will be redircted --> list-page
+#     if same_email_user:
+#         flash("Email is already registered. Please signin to your account")
+#         return redirect("/")
+
+#     # check user by username --> condition to authentiate user
+#     same_username = User.query.filter(User.email == email).first()
+#     if same_username:
+#         flash("please pick another username")
+#         return redirect("/")
+
+#         # add user to db if they are new
+#     db.session.add(new_user)
+#         # commit transaction
+#     db.session.commit()
+
+#     # query db user by email add them to current session and redirect
+#     # user to passport page
+
+#     user = User.query.filter_by(email=email).first()
+
+#     flash("User %s added.You have successfully created an account! Welcome to Live Simply" % email)
+
+#     session["user_id"] = user.user_id
+
+#     return redirect("/index")
 
 ##############################################################################
                         # #  List Page # #
@@ -144,7 +143,7 @@ def register_processed():
 def index():
     """List page"""
 
-    user_id = session['user_id']
+    # user_id = session['user_id']
 
 
 
@@ -156,7 +155,7 @@ def index():
 def contact():
     """List page"""
 
-    user_id = session['user_id']
+    # user_id = session['user_id']
 
 
 
@@ -166,7 +165,7 @@ def contact():
 def about():
     """List page"""
 
-    user_id = session['user_id']
+    # user_id = session['user_id']
 
 
 
