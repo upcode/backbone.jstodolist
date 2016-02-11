@@ -10,7 +10,149 @@
     <link href="css/ihover.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png">
     <link href="css/app.css" rel="stylesheet">
+<style>
+/*Basic Elements*/
+html {
+  margin: 0;
+  padding:0;
+}
 
+body {
+  font-family: 'Playfair Display', serif;
+  padding-top: 100px;
+  line-height: 1.88889;
+  margin:0;
+}
+
+h2, h3, h4, h5, h6, p, a {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  line-height: 10px;
+  text-shadow: 2px 5px #ddd;
+
+}
+  
+
+h1:hover {
+ color: #167F39;
+}
+
+hr {
+  color: #ddd;
+}
+
+ol, ul, li, input {
+   list-style-type: none; 
+   padding-top: 5px;
+   text-align: center;
+}
+/* footer */
+#wrap {
+  bottom:0;
+  padding-top: 100px; 
+}
+
+/* Links */
+a:link {
+  font-weight:bold;
+  text-decoration: none;
+  color: #45BF55;
+}
+
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #D4CDDC;
+}
+
+a:hover {
+  text-decoration: underline; 
+  color: #45BF55;
+
+}
+
+a:focus {
+  text-decoration: underline; 
+  color: #45BF55;
+}
+a:active{
+    text-decoration: underline;
+    color: #45BF55;
+ 
+  }
+
+  header .header {
+    padding-top: 20px;
+    height: 87px;
+
+  }
+
+  footer {
+  text-align: center;
+   height:30px;
+   width:100%;
+  }
+
+/* ---TO DO List ---- */
+  #todo-list input.edit {
+    display: none; /* Hides input box*/
+  }
+  #todo-list .editing label {
+    display: none; /* Hides label text when .editing*/
+  }    
+  #todo-list .editing input.edit {
+    display: inline; /* Shows input text box when .editing*/
+  }    
+
+  .todo-list-box{
+    padding-top: 25px;
+  }
+
+/*---checkbox---*/
+input[type=checkbox] {
+    width : 10px;
+    height: 15px;
+    zoom: 2.0;
+    display: inline; 
+}
+
+input:active {
+  color: #45BF55;
+}
+
+label {  
+    width:150px;       
+    position:relative;
+    left: -25px;
+    display:inline-block;    
+    vertical-align:left; 
+}
+
+input:hover {
+  border-color: #167F39;
+
+}
+.destroy {
+color: red;
+font-weight: bold;
+}
+
+.destroy:hover {
+  color:#ddd;
+}
+
+a[href], input[type='checkbox'], input[type='image'], label[for], select, button, .pointer {
+       cursor: pointer;
+}
+</style>
 
   </head>
 <body>

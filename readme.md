@@ -38,3 +38,6 @@ files structure:
 
 ![alt text](img/app.jpg "To Do List App with Local Storage")
 
+![alt text](/static/img/login.jpg "Login Page")
+![alt text](/static/img/about.jpg "About App")
+![alt text](/static/img/contact.jpg  "Contact")
