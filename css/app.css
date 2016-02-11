@@ -1,23 +1,17 @@
-html, body{
-  height: 100%;
-/*  background-color: #167F39;
-*/}
-* {margin:0;padding:0;} 
+/*Basic Elements*/
+html {
+  margin: 0;
+  padding:0;
+}
+
 body {
-
+  font-family: 'Playfair Display', serif;
   padding-top: 100px;
-
+  line-height: 1.88889;
+  margin:0;
 }
 
-p {
-   font-size: 15px;
-}
-
-/*----colors---*/
-
-/*----fonts----*/
- h2, h3, h4, h5, h6, p, a {
-
+h2, h3, h4, h5, h6, p, a {
   font-family: 'Playfair Display', serif;
   text-align: center;
   letter-spacing: 2px;
@@ -29,49 +23,87 @@ h1 {
   letter-spacing: 5px;
   font-weight: bold;
   line-height: 10px;
+  text-shadow: 2px 5px #ddd;
 
 }
-/*----list----*/
+  
+
+h1:hover {
+ color: #167F39;
+}
+
+hr {
+  color: #ddd;
+}
 
 ol, ul, li, input {
    list-style-type: none; 
    padding-top: 5px;
    text-align: center;
 }
-
-/*---Nav Bar----*/
-
-/*---- Footer ----*/
-
-
+/* footer */
 #wrap {
-bottom:0;
-padding-top: 100px;
-  
+  bottom:0;
+  padding-top: 100px; 
 }
 
-hr {
-
-  color: #ddd;
+/* Links */
+a:link {
+  font-weight:bold;
+  text-decoration: none;
+  color: #45BF55;
 }
+
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #D4CDDC;
+}
+
+a:hover {
+  text-decoration: underline; 
+  color: #45BF55;
+
+}
+
+a:focus {
+  text-decoration: underline; 
+  color: #45BF55;
+}
+a:active{
+    text-decoration: underline;
+    color: #45BF55;
+ 
+  }
+
+  header .header {
+    padding-top: 20px;
+    height: 87px;
+
+  }
+
+  footer {
+  text-align: center;
+   height:30px;
+   width:100%;
+  }
+
 /* ---TO DO List ---- */
+  #todo-list input.edit {
+    display: none; /* Hides input box*/
+  }
+  #todo-list .editing label {
+    display: none; /* Hides label text when .editing*/
+  }    
+  #todo-list .editing input.edit {
+    display: inline; /* Shows input text box when .editing*/
+  }    
 
-    #todo-list input.edit {
-      display: none; /* Hides input box*/
-    }
-    #todo-list .editing label {
-      display: none; /* Hides label text when .editing*/
-    }    
-    #todo-list .editing input.edit {
-      display: inline; /* Shows input text box when .editing*/
-    }    
+  .todo-list-box{
+    padding-top: 25px;
+  }
 
-    .todo-list-box{
-      padding-top: 25px;
-    }
-
-
-/*---Checkbox---*/
+/*---checkbox---*/
 input[type=checkbox] {
     width : 10px;
     height: 15px;
@@ -79,39 +111,31 @@ input[type=checkbox] {
     display: inline; 
 }
 
-/*input[type=checkbox] {
- vertical-align: text-bottom;
-}*/
-
-input:focus {
-  padding: 10px;
-  border: solid 2px #45BF55;
-  transition: border 0.3s;
-}
-
-input:active{
+input:active {
   color: #45BF55;
-
 }
 
-
-label{  
+label {  
     width:150px;       
-
     position:relative;
-    left: -20px;
-
+    left: -25px;
     display:inline-block;    
     vertical-align:left; 
 }
-input.toggle {
-  background-color: green;
+
+input:hover {
+  border-color: #167F39;
+
 }
 .destroy {
 color: red;
+font-weight: bold;
 }
 
-button:hover{
-  color: red;
+.destroy:hover {
+  color:#ddd;
+}
 
+a[href], input[type='checkbox'], input[type='image'], label[for], select, button, .pointer {
+       cursor: pointer;
 }
