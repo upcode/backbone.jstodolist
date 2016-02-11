@@ -1,0 +1,115 @@
+html, body{
+  height: 100%;
+/*  background-color: #167F39;
+*/}
+* {margin:0;padding:0;} 
+body {
+
+  padding-top: 100px;
+
+}
+
+p {
+   font-size: 15px;
+}
+
+/*----colors---*/
+
+/*----fonts----*/
+ h2, h3, h4, h5, h6, p, a {
+
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  line-height: 10px;
+
+}
+/*----list----*/
+
+ol, ul, li, input {
+   list-style-type: none; 
+   padding-top: 5px;
+   text-align: center;
+}
+
+/*---Nav Bar----*/
+
+/*---- Footer ----*/
+
+
+#wrap {
+bottom:0;
+padding-top: 100px;
+  
+}
+
+hr {
+
+  color: #ddd;
+}
+/* ---TO DO List ---- */
+
+    #todo-list input.edit {
+      display: none; /* Hides input box*/
+    }
+    #todo-list .editing label {
+      display: none; /* Hides label text when .editing*/
+    }    
+    #todo-list .editing input.edit {
+      display: inline; /* Shows input text box when .editing*/
+    }    
+
+    .todo-list-box{
+      padding-top: 25px;
+    }
+
+
+/*---Checkbox---*/
+input[type=checkbox] {
+    width : 10px;
+    height: 15px;
+    zoom: 2.0;
+    display: inline; 
+}
+
+/*input[type=checkbox] {
+ vertical-align: text-bottom;
+}*/
+
+input:focus {
+  padding: 10px;
+  border: solid 2px #45BF55;
+  transition: border 0.3s;
+}
+
+input:active{
+  color: #45BF55;
+
+}
+
+
+label{  
+    width:150px;       
+
+    position:relative;
+    left: -20px;
+
+    display:inline-block;    
+    vertical-align:left; 
+}
+input.toggle {
+  background-color: green;
+}
+.destroy {
+color: red;
+}
+
+button:hover{
+  color: red;
