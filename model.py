@@ -31,9 +31,9 @@ def connect_to_db(app):
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     # Prepare SQLAlchemy for connection
     db.app = app
-    DATABASE_URL = "postgresql:///livesimply"
-    DATABASE_URL = os.environ.get("DATABASE_URL",
-                              "postgresql:///livesimply")
+    # DATABASE_URL = "postgresql:///livesimply"
+    # DATABASE_URL = os.environ.get("DATABASE_URL",
+    #                           "postgresql:///livesimply")
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/livesimply'
 
     db.init_app(app)

@@ -153,7 +153,7 @@ def index():
 ##############################################################################
 @app.route('/contact')
 def contact():
-    """List page"""
+    """Contact Page"""
 
     # user_id = session['user_id']
 
@@ -163,7 +163,7 @@ def contact():
 
 @app.route('/about')
 def about():
-    """List page"""
+    """ About Page"""
 
     # user_id = session['user_id']
 
