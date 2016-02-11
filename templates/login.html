@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.png">
+     <link href="/static/css/ihover.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+    <link href="/static/css/app.css" rel="stylesheet">
+<style>
+/*Basic Elements*/
+html {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  padding-top: 100px;
+  line-height: 1.88889;
+  margin:0;
+}
+
+h2, h3, h4, h5, h6, p, a {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  line-height: 10px;
+  text-shadow: 2px 5px #ddd;
+
+}
+
+#signup {
+  padding-right: 250px;
+  padding-top: 20px;
+}
+
+#login{
+  padding-left: 250px;
+  padding-top: 20px;
+}
+</style>
+
+  </head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Live Simply</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div><!--// end nav-->
+
+    <section id="todoapp">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 text-center">
+                  <header id="header">
+                      <h1 class="intro-title">..Live  Simply..</h1>
+                      <hr>
+                  </header>
+                </div><!--// end col-xs-12 col-md-12-->
+            </div><!--// end row-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 text-center">
+
+              <div class="image-box">
+              <center>
+                <div class="ih-item circle colored effect1" id="ihover-image"><a href="#">
+                  <div class="spinner"></div>
+                    <div class="img">
+                      
+                      <img src="/static/img/images.jpg" class="image-responsive" alt="img">
+                  
+                    </div><!--// end img-->
+                  <div class="info">
+                  <div class="info-back">
+                    <h3>Live Simply</h3>
+                      <p>Create Your To Do List</p>
+                  </div><!--// end info-back-->
+                </div></a></div>
+                  </center>
+              <!-- ihover image -->
+            </div>
+          </div>
+
+        </div><!-- /.container -->
+
+            
+
+            <!-- Welcome text modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <header>
+                            <h4><div class="modal-header">Wanderlust</h4>
+                            </header>
+
+                              <div class="modal-body">
+                                <p>Live Simply is a todo list App using Backbone.js and Local Storage. Create an account or login and start organizing your life with easy to do list. App allows you to create new items, edit, delete and check off once tasks are completed.<p>
+                              </div><!--end modal body-->
+                          </div>
+                      </div><!--end modal content-->
+                    </div><!--end modal window-->
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12" id="login" style='text-align: center;'>
+                   
+                    <!-- Sign In Modal Trigger -->
+                   
+                      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#signinModal">Login</button>
+                    </div>
+                  
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12" id="signup" style='text-align: center;'>
+                    
+                    <!-- Register Modal Trigger -->
+                      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#signupModal">Sign-Up</button>
+                    </div>
+                  
+                </div><!-- end //modal button-->
+          </div> <!-- End of container -->
+
+
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Welcome Back</h4>
+                <p>Login into your account</p>
+              </div>
+              <div class="modal-body">
+
+                <form action="/login-process" method="POST" class="form-inline">
+                  <div class="form-group">
+                      <label class="sr-only" for="exampleInputEmail3">E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" name="email" placeholder="Email"  required>
+                  </div>
+                  <div class="form-group">
+                      <label class="sr-only" for="exampleInputPassword3">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword3" name="password" placeholder="Password" pattern="[a-zA-Z0-9]{5,}" title="Minmimum 5 letters or numbers." required>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox">Remember me
+                    </label>
+                  </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- end modal content-->
+          </div><!-- end // modal diaalog-->
+        </div><!-- // end modal window-->
+
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create a New Account</h4>
+                <p>sign up to create your profile</p>
+
+              </div>
+              <div class="modal-body">
+                <form action="/register-process" method="POST" class="form-inline">
+                    <div class="form-group">
+                      <label class="sr-only" for="exampleInputEmail3">Email</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" pattern="[a-zA-Z0-9]{5,}" title="Minmimum 5 letters or numbers." value="DELETE" required>
+                    </div>
+                      <button type="submit" class="btn btn-default" value="DELETE">Sign Up</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- // end modal content -->
+          </div> <!-- // end modal digalog-->
+        </div><!-- // end modal window-->
+
+        
+   <footer id="wrap">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-6 col-md-offset-3 text-center">
+                <strong>Live Simply</strong>
+                   <span></span>   <small class="text-muted">Copyright &copy; <a href="http://www.umapetersen.com">UP[CODE]</a> 2016. All Rights Reserved</small>
+              </div>
+            </div>
+          </div>
+    </footer>
+  
+
+  </body>
+  </html>
