@@ -26,8 +26,7 @@ class User(db.Model):
 
 def connect_to_db(app):
     """Connect the database to our Flask App"""
-    DATABASE_URL = os.environ.get("DATABASE_URL",
-                              "postgresql:///livesimply")
+    
     DATABASE_URL = "postgresql:///livesimply"
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     # Prepare SQLAlchemy for connection
